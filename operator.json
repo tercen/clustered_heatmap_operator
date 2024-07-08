@@ -1,10 +1,70 @@
 {
-  "name": "Template_R_operator",
+  "name": "Clustered Heatmap",
   "description": "Calculate the mathematical average of the data points in a cell.",
-  "tags": ["basic statistics"],
+  "tags": ["data visualisation", "plot", "heatmap"],
   "authors": ["tercen"],
-  "urls": ["https://github.com/tercen/template-R-operator-lite"],
-  "properties": []
+  "urls": ["https://github.com/tercen/clustered_heatmap_operator"],
+  "properties": [
+    {
+      "kind": "BooleanProperty",
+      "name": "Cluster Rows",
+      "defaultValue": true,
+      "description": "Whether or not the rows should be clustered."
+    },
+    {
+      "kind": "BooleanProperty",
+      "name": "Cluster Columns",
+      "defaultValue": true,
+      "description": "Whether or not the columns should be clustered."
+    },
+    {
+      "kind": "BooleanProperty",
+      "name": "Display Legend",
+      "defaultValue": true,
+      "description": "Whether the legend should be drawn or not."
+    },
+    {
+      "kind": "EnumeratedProperty",
+      "isSingleSelection": true,
+      "name": "Scale",
+      "defaultValue": "none",
+      "values": ["none", "row", "column"],
+      "description": "Indicates if the values should be centered and scaled in either the row direction or the column direction, or none."
+    },
+    {
+      "kind": "EnumeratedProperty",
+      "isSingleSelection": true,
+      "name": "Clustering Method",
+      "defaultValue": "complete",
+      "values": ["ward.D", "ward.D2", "single", "complete", "average", "mcquitty", "median", "centroid"],
+      "description": "Clustering method used."
+    },
+    {
+      "kind": "BooleanProperty",
+      "name": "Show Row Names",
+      "defaultValue": true,
+      "description": "Whether to display row names or not."
+    },
+    {
+      "kind": "BooleanProperty",
+      "name": "Show Column Names",
+      "defaultValue": true,
+      "description": "Whether to display column names or not."
+    },
+    {
+      "kind": "BooleanProperty",
+      "name": "Show Row Factors",
+      "defaultValue": false,
+      "description": "Whether to display row factors or not."
+    },
+    {
+      "kind": "BooleanProperty",
+      "name": "Show Column Factors",
+      "defaultValue": false,
+      "description": "Whether to display column factors or not."
+    }
+  ]
 }
+
 
 
