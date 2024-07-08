@@ -42,13 +42,13 @@
     {
       "kind": "BooleanProperty",
       "name": "Show Row Names",
-      "defaultValue": true,
+      "defaultValue": false,
       "description": "Whether to display row names or not."
     },
     {
       "kind": "BooleanProperty",
       "name": "Show Column Names",
-      "defaultValue": true,
+      "defaultValue": false,
       "description": "Whether to display column names or not."
     },
     {
