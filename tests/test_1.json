@@ -1,0 +1,17 @@
+{
+  "kind": "OperatorUnitTest",
+  "name": "test_1",
+  "namespace": "ds7",
+  "inputDataUri": "test_1_in.csv",
+  "outputDataUri": ["test_1_out_1.csv"],
+  "columns": [
+    "annot.Donor"
+  ],
+  "rows": ["feature_name"],
+  "colors": [],
+  "labels": [],
+  "yAxis": "y_values",
+  "xAxis": "",
+  "generatedOn": "07/08/2024 10:35:14 AM 2024",
+  "version": ""
+}
