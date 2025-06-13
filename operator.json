@@ -14,57 +14,57 @@
     {
       "kind": "BooleanProperty",
       "name": "Cluster Columns",
-      "defaultValue": true,
+      "defaultValue": false,
       "description": "Whether or not the columns should be clustered."
-    },
-    {
-      "kind": "BooleanProperty",
-      "name": "Display Legend",
-      "defaultValue": true,
-      "description": "Whether the legend should be drawn or not."
-    },
-    {
-      "kind": "EnumeratedProperty",
-      "isSingleSelection": true,
-      "name": "Scale",
-      "defaultValue": "none",
-      "values": ["none", "row", "column"],
-      "description": "Indicates if the values should be centered and scaled in either the row direction or the column direction, or none."
-    },
-    {
-      "kind": "EnumeratedProperty",
-      "isSingleSelection": true,
-      "name": "Clustering Method",
-      "defaultValue": "complete",
-      "values": ["ward.D", "ward.D2", "single", "complete", "average", "mcquitty", "median", "centroid"],
-      "description": "Clustering method used."
-    },
-    {
-      "kind": "BooleanProperty",
-      "name": "Show Row Names",
-      "defaultValue": false,
-      "description": "Whether to display row names or not."
-    },
-    {
-      "kind": "BooleanProperty",
-      "name": "Show Column Names",
-      "defaultValue": false,
-      "description": "Whether to display column names or not."
-    },
-    {
-      "kind": "BooleanProperty",
-      "name": "Show Row Factors",
-      "defaultValue": false,
-      "description": "Whether to display row factors or not."
-    },
-    {
-      "kind": "BooleanProperty",
-      "name": "Show Column Factors",
-      "defaultValue": false,
-      "description": "Whether to display column factors or not."
     }
-  ]
+  ],
+  "operatorSpec": {
+    "kind": "OperatorSpec",
+    "ontologyUri": "https://tercen.com/_ontology/tercen",
+    "ontologyVersion": "0.0.1",
+    "inputSpecs": [
+      {
+        "kind": "CrosstabSpec",
+        "metaFactors": [
+          {
+            "kind": "MetaFactor",
+            "name": "Rows",
+            "type": "",
+            "description": "Factors to stratify per row.",
+            "ontologyMapping": "sample",
+            "crosstabMapping": "row",
+            "cardinality": "1..n",
+            "factors": []
+          },
+          {
+            "kind": "MetaFactor",
+            "name": "Columns",
+            "type": "",
+            "description": "Factors to stratify per column.",
+            "ontologyMapping": "variable",
+            "crosstabMapping": "column",
+            "cardinality": "1..n",
+            "factors": []
+          }
+        ],
+        "axis": [
+          {
+            "kind": "AxisSpec",
+            "metaFactors": [
+              {
+                "kind": "MetaFactor",
+                "name": "Measurement",
+                "type": "numeric",
+                "description": "Measurement values (numeric, per cell).",
+                "ontologyMapping": "measurement",
+                "crosstabMapping": "y",
+                "cardinality": "1",
+                "factors": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
 }
-
-
-
