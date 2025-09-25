@@ -4,7 +4,7 @@
   "tags": ["data visualisation", "plot", "heatmap"],
   "authors": ["tercen"],
   "urls": ["https://github.com/tercen/clustered_heatmap_operator"],
-  "container": "ghcr.io/tercen/clustered_heatmap_operator:1.0.0",
+  "container": "ghcr.io/tercen/clustered_heatmap_operator:1.0.2",
   "properties": [
     {
       "kind": "BooleanProperty",
