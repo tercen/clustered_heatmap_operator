@@ -1,9 +1,10 @@
 {
   "name": "Clustered Heatmap",
-  "description": "Calculate the mathematical average of the data points in a cell.",
+  "description": "Produce a clustered heatmap plot.",
   "tags": ["data visualisation", "plot", "heatmap"],
   "authors": ["tercen"],
   "urls": ["https://github.com/tercen/clustered_heatmap_operator"],
+  "container": "ghcr.io/tercen/clustered_heatmap_operator:1.0.0",
   "properties": [
     {
       "kind": "BooleanProperty",
