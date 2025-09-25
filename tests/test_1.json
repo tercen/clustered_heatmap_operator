@@ -1,7 +1,7 @@
 {
   "kind": "OperatorUnitTest",
   "name": "test_1",
-  "namespace": "ds7",
+  "namespace": "ds0",
   "inputDataUri": "test_1_in.csv",
   "outputDataUri": ["test_1_out_1.csv"],
   "columns": [
