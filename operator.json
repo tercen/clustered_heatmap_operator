@@ -1,9 +1,17 @@
 {
   "name": "Clustered Heatmap",
   "description": "Produce a clustered heatmap plot.",
-  "tags": ["data visualisation", "plot", "heatmap"],
-  "authors": ["tercen"],
-  "urls": ["https://github.com/tercen/clustered_heatmap_operator"],
+  "tags": [
+    "data visualisation",
+    "plot",
+    "heatmap"
+  ],
+  "authors": [
+    "tercen"
+  ],
+  "urls": [
+    "https://github.com/tercen/clustered_heatmap_operator"
+  ],
   "container": "ghcr.io/tercen/clustered_heatmap_operator:1.0.2",
   "properties": [
     {
@@ -15,8 +23,71 @@
     {
       "kind": "BooleanProperty",
       "name": "Cluster Columns",
-      "defaultValue": false,
+      "defaultValue": true,
       "description": "Whether or not the columns should be clustered."
+    },
+    {
+      "kind": "BooleanProperty",
+      "name": "Display Legend",
+      "defaultValue": true,
+      "description": "Whether or not to display the legend."
+    },
+    {
+      "kind": "EnumeratedProperty",
+      "name": "Scale",
+      "defaultValue": "none",
+      "values": [
+        "none",
+        "row",
+        "column"
+      ],
+      "description": "Whether values should be scaled to row, column or not at all."
+    },
+    {
+      "kind": "EnumeratedProperty",
+      "name": "Clustering Method",
+      "defaultValue": "complete",
+      "values": [
+        "ward.D",
+        "ward.D2",
+        "single",
+        "complete",
+        "average",
+        "mcquitty",
+        "median",
+        "centroid"
+      ],
+      "description": "Method used for hierarchical clustering."
+    },
+    {
+      "kind": "BooleanProperty",
+      "name": "Show Row Names",
+      "defaultValue": false,
+      "description": "Whether or not to show row names."
+    },
+    {
+      "kind": "BooleanProperty",
+      "name": "Show Column Names",
+      "defaultValue": false,
+      "description": "Whether or not to show column names."
+    },
+    {
+      "kind": "StringProperty",
+      "name": "Output File Name",
+      "defaultValue": "Heatmap.png",
+      "description": "Name of the output file."
+    },
+    {
+      "kind": "BooleanProperty",
+      "name": "Show Row Factors",
+      "defaultValue": false,
+      "description": "Whether or not to show row annotation factors."
+    },
+    {
+      "kind": "BooleanProperty",
+      "name": "Show Column Factors",
+      "defaultValue": false,
+      "description": "Whether or not to show column annotation factors."
     }
   ],
   "operatorSpec": {
